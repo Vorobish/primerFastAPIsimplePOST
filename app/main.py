@@ -6,7 +6,7 @@ app = FastAPI()
 templates = Jinja2Templates(directory="app/templates")
 
 
-@app.post('/register')
+@app.post('/register/')
 async def register(request: Request, username: str = Form()
                    , password: str = Form()) -> HTMLResponse:
     print(username)
